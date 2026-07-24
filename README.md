@@ -4,6 +4,14 @@ vEdayug is an AI-powered telehealthcare platform designed to bridge the gap betw
 
 **Note:** This project is transitioning to a unified Python backend architecture to seamlessly integrate with our Machine Learning and NLP microservices.
 
+##  Detailed Documentation
+
+For specific setup commands, API routes, and team workflows, please refer to the dedicated module documentation:
+
+*    **[Frontend Documentation](./frontend/README.md)**
+*   **[Backend Documentation](./backend/README.md)**
+*    **[ML & Chatbot Services](./team-docs/)** *(Coming soon)*
+
 ##  Team BMH
 
 This project is developed and maintained by **Team BMH**:
