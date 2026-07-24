@@ -1,18 +1,10 @@
-# 🏥 vEdayug
+# vEdayug
 
 vEdayug is an AI-powered telehealthcare platform designed to bridge the gap between patients and medical professionals. It features real-time video consultations, secure payment gateways, and AI-driven medical report analysis.
 
-**Note:** This project is transitioning to a unified Python backend architecture to seamlessly integrate with our Machine Learning and NLP microservices.
+**Note:** This project utilizes a unified Python backend architecture to seamlessly integrate with our Machine Learning and NLP microservices.
 
-##  Detailed Documentation
-
-For specific setup commands, API routes, and team workflows, please refer to the dedicated module documentation:
-
-*    **[Frontend Documentation](./frontend/README.md)**
-*   **[Backend Documentation](./backend/README.md)**
-*    **[ML & Chatbot Services](./team-docs/)** *(Coming soon)*
-
-##  Team BMH
+## Team BMH
 
 This project is developed and maintained by **Team BMH**:
 
@@ -22,16 +14,26 @@ This project is developed and maintained by **Team BMH**:
 
 ---
 
-##  Repository Structure
+## Module Documentation
 
-\`\`\`text
-HealthVision/
+For detailed setup instructions, tech stacks, and development guidelines specific to each team's domain, please refer to their dedicated documentation:
+
+*   [**Frontend Documentation**](./frontend/README.md)
+*   [**Backend Documentation**](./backend/README.md)
+*   [**Chatbot Documentation**](./vedayug-chatbot/README.md)
+*   [**ML Service Documentation**](./ml-service/README.md)
+
+---
+
+## Repository Structure
+
+```text
+vEdayug/
 ├── frontend/              # React.js frontend application (Vite + Tailwind)
 ├── backend/               # Python Core API (Handles Auth, Payments, MongoDB)
-├── healthvision-chatbot/  # Independent symptom chatbot service (Python)
+├── vedayug-chatbot/       # Independent symptom chatbot service (Python)
 ├── ml-service/            # Python AI/ML service for OCR and report analysis
 └── team-docs/             # Project documentation & design assets
-\`\`\`
 
 ---
 
@@ -52,7 +54,7 @@ HealthVision/
 
 ---
 
-## 🛠️ Local Development Setup
+## Local Development Setup
 
 ### 1. Frontend Setup
 \`\`\`bash
@@ -62,7 +64,7 @@ npm run dev
 \`\`\`
 
 ### 2. Python Services Setup (Backend, Chatbot, ML)
-Each Python directory (`backend`, `healthvision-chatbot`, `ml-service`) requires its own virtual environment.
+Each Python directory (`backend`, `vedayug-chatbot`, `ml-service`) requires its own virtual environment.
 
 \`\`\`bash
 # Example for the core backend:
@@ -79,12 +81,12 @@ python main.py  # (or uvicorn main:app --reload)
 
 ---
 
-##  Core System Flows
+## Core System Flows
 
 1. **Authentication:** The Python `backend` handles JWT creation and MongoDB user storage.
 2. **Appointments & Payments:** The `backend` generates Razorpay orders and verifies webhook signatures for timeslot booking.
 3. **AI Report Analysis:** Uploaded PDFs are passed to the `ml-service` for OCR extraction and data parsing.
-4. **Interactive Chatbot:** The frontend queries the `healthvision-chatbot` for NLP-driven symptom triage and urgency badging.
+4. **Interactive Chatbot:** The frontend queries the `vedayug-chatbot` for NLP-driven symptom triage and urgency badging.
 
 ---
 
